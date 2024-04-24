@@ -1,0 +1,9 @@
+@mixin text-main {
+  font-family: $font1;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  @media (min-width: 600px) {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+}

@@ -1,0 +1,19 @@
+.section-questions {
+  .section-layer {
+    flex-direction: column;
+  }
+  .questions {
+    &__title {
+      @media (min-width: 600px) {
+        text-align: center;
+      }
+    }
+
+    &__text {
+      @include text-main;
+      @media (min-width: 600px) {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.promoblock {
+  padding: 3.6rem 1.8rem;
+  @media (min-width: $tablet) {
+    padding: 6.4rem 0;
+  }
+
+  .section-layer {
+    padding: 2.4rem;
+    box-shadow: 0px 0.4rem 2rem 0px rgba(0, 0, 0, 0.08);
+    border-radius: 1.6rem;
+    @media (min-width: $tablet) {
+      padding: 4.8rem 4.8rem 8.2rem 4.8rem;
+      overflow: hidden;
+      max-width: 78%;
+      &::before {
+        content: "";
+        width: 35rem;
+        height: 35rem;
+        z-index: -1;
+        will-change: filter;
+        -webkit-filter: blur(80px);
+        filter: blur(80px);
+        background-color: #d7ff38a3;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 10rem;
+        right: -5rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    @media (min-width: $tablet) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__text {
+    @include text-main;
+    p:first-child {
+      max-width: 98%;
+    }
+
+    p:last-child {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet) {
+      max-width: 95%;
+      p {
+        line-height: 2.8rem;
+      }
+      p:first-child {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.8%;
+    align-items: center;
+  }
+  &__pic-layer {
+    display: none;
+    @media (min-width: $tablet) {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__content {
+    text-align: center;
+    @media (min-width: $tablet) {
+      text-align: left;
+      max-width: 65%;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #1f2229;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0;
+    font-size: 1.2rem;
+    line-height: normal;
+    transition: all 0.4s;
+    display: inline-block;
+    position: absolute;
+    right: -1.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+    @media (min-width: $tablet) {
+      right: -2.2rem;
+      font-size: 1.6rem;
+      width: 2rem;
+      height: 2rem;
+      &:hover {
+        width: 2.1rem;
+        height: 2.1rem;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    .promoblock {
+      &__content {
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3.2rem;
+      }
+    }
+
+    .promoblock-pic-layer {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      img {
+        display: block;
+        width: 100%;
+        float: right;
+        max-width: 34vw;
+      }
+    }
+  }
+}

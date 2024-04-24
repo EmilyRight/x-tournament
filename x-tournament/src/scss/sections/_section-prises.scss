@@ -1,0 +1,78 @@
+.section-prises {
+  .section-layer {
+    flex-direction: column;
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
+
+  }
+  .prises-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      text-align: center;
+      @media (min-width: 768px) {
+        margin-bottom: 1.4rem;
+      }
+    }
+
+    &__text {
+      text-align: center;
+      @include text-main;
+      margin-bottom: 1.5rem;
+      @media (min-width: 768px) {
+        max-width: 83%;
+      }
+    }
+  }
+  .prises-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 2rem;
+    @media (min-width: 768px) {
+      padding: 4rem 2rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: 768px) {
+        width: calc(100% / 3);
+      }
+    }
+  }
+  .item {
+    &__image {
+      max-width: 11rem;
+      img {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: 768px) {
+        width: 100%;
+        max-width: 27rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__text {
+      font-family: $font1;
+      @include text-main;
+      p {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      p:last-child {
+        font-weight: 900;
+      }
+    }
+  }
+}
