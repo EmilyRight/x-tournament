@@ -63,5 +63,15 @@
       max-width: 46rem;
       border-radius: 1.2rem;
     }
+
+    &__text {
+      position: absolute;
+      color: #fff;
+      font-family: $fontStencil;
+      text-shadow: 0 0 5px #5b5757b5;
+      bottom: 1rem;
+      width: 100%;
+      text-align: center;
+    }
   }
 }

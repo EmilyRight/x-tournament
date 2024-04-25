@@ -25,7 +25,10 @@ function openPopup() {
   const popupLinksList = document.querySelectorAll('.popup-link');
   popupLinksList.forEach((popupLink) => {
     const { id } = popupLink;
-    popupLink.addEventListener('click', () => openModal(id));
+    popupLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      openModal(id);
+    });
   });
 }
 
