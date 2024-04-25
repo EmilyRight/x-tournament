@@ -13,6 +13,15 @@
     padding-left: 15%;
   }
 }
+.swiper-container-no-margins {
+  @media (min-width: 768px) {
+    margin-right: -15%;
+    padding-right: 15%;
+    margin-left: -15%;
+    padding-left: 15%;
+  }
+}
+
 .swiper-container-no-flexbox {
   .swiper-slide {
     float: left;

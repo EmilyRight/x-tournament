@@ -2,18 +2,14 @@ import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 import Swiper from './vendor/swiper.min';
 import { setCurrentYear } from './components/utils';
-import GTMEvents from './components/gtmEvents';
 import videoTeaser from './components/videoTeaser';
 import { openModal } from './components/modal';
-
-const GTM = new GTMEvents();
 
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
   handleSlider();
-  GTM.addEventListeners();
   setCurrentYear();
   openPopup();
   goNextSection();
@@ -51,7 +47,7 @@ function goNextSection() {
 }
 
 function handleSlider() {
-  const swiper = new Swiper('.swiper-container', {
+  const options = {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -63,12 +59,18 @@ function handleSlider() {
     slidesPerView: 'auto',
     spaceBetween: 24,
     // loop: true,
-
+    // slidesOffsetBefore: 60,
     breakpoints: {
       768: {
         spaceBetween: 16,
       },
     },
+  };
+
+  const swiper = new Swiper('.swiper-container', options);
+  swiper.on('slideChange', () => {
+    options.containerModifierClass = 'swiper-container-no-margins ';
+    swiper.update();
   });
   return swiper;
 }

@@ -1,5 +1,6 @@
 .section-slider {
   background-color: #000;
+
   &__content {
   }
 
@@ -50,6 +51,8 @@
   .swiper-slide {
     max-width: 100%;
   }
+
+
   .slide {
     border-radius: 1.2rem;
     overflow: hidden;
