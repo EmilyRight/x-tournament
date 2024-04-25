@@ -53,7 +53,7 @@
   .slide {
     border-radius: 1.2rem;
     overflow: hidden;
-    cursor: pointer;
+    cursor: col-resize;
     img {
       display: block;
       max-width: 100%;
@@ -67,7 +67,7 @@
     &__text {
       position: absolute;
       color: #fff;
-      font-family: $fontStencil;
+      font-family: $font1;
       text-shadow: 0 0 5px #5b5757b5;
       bottom: 1rem;
       width: 100%;
